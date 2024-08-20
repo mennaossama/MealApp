@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/browseFragment">
+    <fragment
+        android:id="@+id/browseFragment"
+        android:name="com.example.mealsapp.BrowseFragment"
+        android:label="BrowseFragment"
+        tools:layout="@layout/fragment_browse">
+        <action
+            android:id="@+id/action_browseFragment_to_mealDetailesFragment"
+            app:destination="@id/mealDetailesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.example.mealsapp.MyCartFragment"
+        android:label="MyCartFragment"
+        tools:layout="@layout/fragment_my_cart"/>
+
+    <fragment
+        android:id="@+id/mealPlanFragment"
+        android:name="com.example.mealsapp.MealPlanFragment"
+        android:label="MealPlanFragment"
+        tools:layout="@layout/fragment_meal_plan"/>
+
+    <fragment
+        android:id="@+id/mealDetailesFragment"
+        android:name="com.example.mealsapp.MealDetailesFragment"
+        android:label="MealDetailesFragment"
+        tools:layout="@layout/fragment_meal_detailes">
+
+        <argument android:name="meals"
+            app:argType="com.example.mealsapp.MealModel"></argument>
+    </fragment>
+</navigation>
